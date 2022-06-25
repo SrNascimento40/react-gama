@@ -1,4 +1,5 @@
 import "./styles.css"
+import {Link as LinkRouter} from "react-router-dom"
 
 interface linkProps{
     text:string;
@@ -7,9 +8,9 @@ interface linkProps{
 
 function Link (props: linkProps) {
     return (
-        <a href={props.redirect} target="_blank" rel="noreferrer">
+        <LinkRouter to={props.redirect} >
             {props.text}
-        </a>
+        </LinkRouter>
     )
 }
 
